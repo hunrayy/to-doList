@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        li{
+            padding: 1em;
+            background-color: salmon;
+            width: 10vw;
+            color: white;
+            text-align: center;
+            position: absolute;
+            left: -300px;
+            /* animation-name: animate; */
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes animate {
+            0%{
+                left: -300px;
+            }
+            /* 60%{
+                left: 50px;
+            } */
+            100%{
+                left: 0px;
+            }
+        }
+        #l1{
+            /* top: 0vh; */
+        }
+        #l2{
+            top: 10vh;
+            /* animation-delay: .2s; */
+        }
+        #l3{
+            top: 17vh;
+            /* animation-delay: .4s; */
+        }
+        #l4{
+            top: 24vh;
+            /* animation-delay: .6s; */
+        }
+        #l5{
+            top: 31vh;
+            /* animation-delay: .8s; */
+        }
+        #l6{
+            top: 38vh;
+            /* animation-delay: 1s; */
+        }
+        #l7{
+            top: 45vh;
+            /* animation-delay: 1.2s; */
+        }
+        #l8{
+            top: 52vh;
+            /* animation-delay: 1.4s; */
+        }
+        #cancel{
+            position: absolute;
+            top: 0vh;
+            left: -300px;
+            height: 20px;
+            background-color: blue;
+            /* animation-name: button; */
+            width: 20vw;
+        }
+        @keyframes cancel {
+            0%{
+                left: 0px;
+            }
+            /* 60%{
+                left: 50px;
+            } */
+            100%{
+                left: -300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <button id="button">menu bar</button>
+        <ul type="none">
+            <button id="cancel">cancel</button>
+            <li id="l1">home</li>
+            <li id="l2">service</li>
+            <li id="l3">contact</li>
+            <li id="l4">name</li>
+            <li id="l5">links</li>
+            <li id="l6">subject</li>
+            <li id="l7">chemistry</li>
+            <li id="l8">maths</li>
+        </ul>
+    </div>
+    <script>
+        document.getElementById("button").addEventListener("click", ()=>{
+            document.getElementById("button").style.visibility = "hidden"
+            document.getElementById("cancel").style.animationName = "animate"
+            document.getElementById("cancel").style.left = "0px"
+
+            document.getElementById("l1").style.animationName = "animate"
+            document.getElementById("l1").style.left = "0px"
+
+            document.getElementById("l2").style.animationName = "animate"
+            document.getElementById("l2").style.left = "0px"
+
+            document.getElementById("l3").style.animationName = "animate"
+            document.getElementById("l3").style.left = "0px"
+
+            document.getElementById("l4").style.animationName = "animate"
+            document.getElementById("l4").style.left = "0px"
+
+            document.getElementById("l5").style.animationName = "animate"
+            document.getElementById("l5").style.left = "0px"
+
+            document.getElementById("l6").style.animationName = "animate"
+            document.getElementById("l6").style.left = "0px"
+
+            document.getElementById("l7").style.animationName = "animate"
+            document.getElementById("l7").style.left = "0px"
+
+            document.getElementById("l8").style.animationName = "animate"
+            document.getElementById("l8").style.left = "0px"
+
+        })
+
+
+
+
+        document.getElementById("cancel").addEventListener("click", ()=>{
+            document.getElementById("button").style.visibility = "visible"
+            document.getElementById("cancel").style.animationName = "cancel"
+            document.getElementById("cancel").style.left = "-300px"
+
+            document.getElementById("l1").style.animationName = "cancel"
+            document.getElementById("l1").style.left = "-300px"
+
+            document.getElementById("l2").style.animationName = "cancel"
+            document.getElementById("l2").style.left = "-300px"
+
+            document.getElementById("l3").style.animationName = "cancel"
+            document.getElementById("l3").style.left = "-300px"
+
+            document.getElementById("l4").style.animationName = "cancel"
+            document.getElementById("l4").style.left = "-300px"
+
+            document.getElementById("l5").style.animationName = "cancel"
+            document.getElementById("l5").style.left = "-300px"
+
+            document.getElementById("l6").style.animationName = "cancel"
+            document.getElementById("l6").style.left = "-300px"
+
+            document.getElementById("l7").style.animationName = "cancel"
+            document.getElementById("l7").style.left = "-300px"
+
+            document.getElementById("l8").style.animationName = "cancel"
+            document.getElementById("l8").style.left = "-300px"
+
+        })
+    </script>
+</body>
+</html>

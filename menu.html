@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100%;
+            width: 100%;
+            position: fixed;
+        }
+        div{
+            /* border: 1px solid black; */
+            background-color: salmon;
+            width: 20vw;
+            height: 10vh;
+            position: absolute;
+            /* animation-name: henry; */
+            /* animation-duration: 1s; */
+            text-align: center;
+            /* animation-iteration-count: infinite; */
+        }
+    
+        #div{
+            top: -200px;
+            /* animation-name: first; */
+        }
+        @keyframes first {
+            from{top: -200px;}
+            to{top: 15px;
+            left: 0px;}
+        }
+        #divv{
+            top: 12vh;
+            left: -600px;
+            /* animation-delay: .1s; */
+            /* animation-name: henry; */
+        }
+        @keyframes henry {
+            0%{
+                top: 12vh;
+                left: -600px;
+            }
+            /* 60%{
+                left: 10vw;
+            } */
+            100%{
+                left: 0vw;
+            }
+        }
+        #divvv{
+            top: 40vh;
+            left: -400px;
+            /* animation-name: third; */
+            /* animation-delay: .2s; */
+        }
+        @keyframes third {
+            0%{
+                top: 40vh;
+                left: -400px;
+            }
+            50%{
+                top: 40vh;
+                left: 10px;
+            }
+            100%{
+                top: 22vh;
+                left: 0px;
+            }
+        }
+    #diva{
+        top: -50vh;
+        left: 50vw;
+        /* animation-delay: .3s; */
+        /* animation-name: fourth; */
+        /* animation-duration: 1; */
+    }
+    @keyframes fourth {
+        0%{
+            top: -50vh;
+            left: 50vw;
+        }
+        50%{
+            top: 32vh;
+            left: 50vw;
+        }
+        100%{
+            left: 0px;
+            top: 32vh;
+        }
+    }
+    #divaa{
+        top: 90vh;
+        left: 86vw;
+        /* animation-delay: .4s; */
+        /* animation-name: fifth; */
+    }
+    @keyframes fifth {
+        0%{
+            top: 90vh;
+            left: 80vw; 
+        }
+        50%{
+            top: 90vh;
+            left: 0vw;
+        }
+        100%{
+            left: 0vw;
+            top: 42vh;
+        }
+    }
+    #divaaa{
+        top: 100vh;
+        left: 50vw;
+        /* animation-delay: .5s; */
+        /* animation-name: sixth; */
+    }
+    @keyframes sixth {
+        0%{
+            top: 100vh;
+            left: 50vw;
+        }
+        50%{
+            left: 50vw;
+            top: 52vh;
+        }
+        100%{
+            left: 0vw;
+            top: 52vh;
+        }
+    }
+
+    #divb{
+        top: -20vh;
+        left: 70vw;
+        /* animation-name: seventh; */
+        /* animation-duration: 1s; */
+    }
+    @keyframes seventh{
+        0%{
+            top: -20vh;
+            left: 70vw;
+        }
+        50%{
+            top: 80vh;
+            left: 0vw;
+        }
+        100%{
+            top: 62vh;
+            left: 0vw;
+        }
+    }
+    </style>
+</head>
+<body>
+    <button id="btn">my menu bar</button> <button id="btnn">cancle</button>
+    <div id="div">home</div>
+    <div id="divv">contact</div>
+    <div id="divvv">service</div>
+    <div id="diva">about us</div>
+    <div id="divaa">faq</div>
+    <div id="divaaa">feed back</div>
+    <div id="divb">previous</div>
+    <script>
+        document.getElementById("btn").addEventListener("click", ()=>{
+            document.getElementById("div").style.animationName = "first"
+            document.getElementById("div").style.top = "15px"
+            document.getElementById("div").style.animationDuration = ".5s"
+
+            document.getElementById("divv").style.animationName = "henry"
+            document.getElementById("divv").style.left = "0vw"
+            // document.getElementById("divv").style.top = "22vw"
+            document.getElementById("divv").style.animationDuration = "1s"
+
+            document.getElementById("divvv").style.animationName = "third"
+            document.getElementById("divvv").style.left = "0vw"
+            document.getElementById("divvv").style.top = "22vh"
+            document.getElementById("divvv").style.animationDuration = "1.5s"
+
+            document.getElementById("diva").style.animationName = "fourth"
+            document.getElementById("diva").style.left = "0vw"
+            document.getElementById("diva").style.top = "32vh"
+            document.getElementById("diva").style.animationDuration = "2s"
+
+            document.getElementById("divaa").style.animationName = "fifth"
+            document.getElementById("divaa").style.left = "0vw"
+            document.getElementById("divaa").style.top = "42vh"
+            document.getElementById("divaa").style.animationDuration = "2.5s"
+
+            document.getElementById("divaaa").style.animationName = "sixth"
+            document.getElementById("divaaa").style.left = "0vw"
+            document.getElementById("divaaa").style.top = "52vh"
+            document.getElementById("divaaa").style.animationDuration = "3s"
+
+            document.getElementById("divb").style.animationName = "seventh"
+            document.getElementById("divb").style.left = "0vw"
+            document.getElementById("divb").style.top = "62vh"
+            document.getElementById("divb").style.animationDuration = "3s"
+
+            document.getElementById("div").style.display = "block"
+            document.getElementById("divv").style.display = "block"
+            document.getElementById("divvv").style.display = "block"
+            document.getElementById("diva").style.display = "block"
+            document.getElementById("divaa").style.display = "block"
+            document.getElementById("divaaa").style.display = "block"
+            document.getElementById("divb").style.display = "block"
+        })
+
+
+        document.getElementById("btnn").addEventListener("click", ()=>{
+            document.getElementById("div").style.display = "none"
+            document.getElementById("divv").style.display = "none"
+            document.getElementById("divvv").style.display = "none"
+            document.getElementById("diva").style.display = "none"
+            document.getElementById("divaa").style.display = "none"
+            document.getElementById("divaaa").style.display = "none"
+            document.getElementById("divb").style.display = "none"
+
+        })
+    </script>
+
+</body>
+</html>
